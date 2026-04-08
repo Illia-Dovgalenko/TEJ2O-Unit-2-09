@@ -5,16 +5,18 @@
  * This program Rock - Paper - Scissors
 */
 
+
 let score = 0
 let randomNumber = 0
 
+basic.showIcon(IconNames.Happy)
 input.onGesture(Gesture.Shake, function () {
     randomNumber = randint(0, 2)
     
     // Rock
     if (randomNumber == 0) {
         basic.showIcon(IconNames.Square)
-        // assume win condition (you can change this logic if needed)
+
     }
 
     // Paper
@@ -31,13 +33,13 @@ input.onGesture(Gesture.Shake, function () {
     basic.clearScreen()
 })
 
-// Button A: add score if won
+// add score if won
 input.onButtonPressed(Button.A, function () {
         score += 1
         basic.showNumber(score)
 })
 
-// Button B: show score
+// show score
 input.onButtonPressed(Button.B, function () {
     basic.showNumber(score)
 })
